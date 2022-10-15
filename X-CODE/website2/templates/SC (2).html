@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<Style>images
+        *{
+    margin: 0;
+    padding: 0;
+    font-family: 'Cairo', sans-serif;
+
+}
+.Header{
+    min-height: 100vh;
+    width: 100%;
+    background-image:url('../static/images.gif'); 
+    background-repeat: repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 60px;
+}
+.nv-links{
+    flex:1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+.textbox{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.textbox h1{
+    font-size: 62px;
+}
+.textbox p{
+    margin: 10px 0 40px;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.hero-btn:hover{
+    border: 1px solid #f44336;
+    background: #f44336;
+    transition: 1s;
+}
+nav .fa{
+    display: none;
+}
+@media(max-width: 700px){
+    .textbox h1{
+        font-size: 20px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: absolute;
+        background: #f44336;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+
+    }
+    nav .fa{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul{
+        padding: 30px;
+    }
+}
+/* UTILITY */
+.course{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+h1{
+    font-size: 36px;
+    font-weight: 600;
+    color: burlywood;
+
+}
+.p{
+    color: #777;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 30px;
+    padding: 5px;
+}
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.feature-1{
+    flex-basis: 31%;
+    background-image: url(../static/sing2.jpg);
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    background-size: cover;
+    
+    
+}
+.feature-2{
+    flex-basis: 31%;
+    background-image: url(../static/asad2.jpg);
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    background-size: cover;
+    font-size: 20px;
+}
+.feature-3{
+    flex-basis: 31%;
+    background-image: url(../static/ahmed2.jpg);
+    background-position: center;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+.feature-1:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+    background-image:url('../static/singh.gif');
+    background-repeat:no-repeat; 
+    background-size: cover;
+
+}
+.feature-2:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+    background-image:url('../static/asad.gif');
+    background-repeat:no-repeat; 
+    background-size: cover;
+}
+.feature-3:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+    background-image:url('../static/ahmed.gif');
+    background-repeat:no-repeat; 
+    background-size: cover;
+}
+@media(max-width:700px){
+    .row{
+        flex-direction: column;
+    }
+}
+
+</Style>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X-CODE-THS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/fontawesome.min.css">
+</head>
+<body>
+    <section class="Header">
+       <nav>
+        <a href="SC.html">
+        <img src="https://nashiksmartcity.in/wp-content/uploads/2020/07/favicon.png" alt="Logo" />
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href=""><b>HOME</b></a></li>
+                <li><a href=""><b>PLANS</b></a></li>
+                <li><a href=""><b>CAREERS</b></a></li>
+                <li><a href=""><b>SERVICES</b></a></li>
+                <li><a href=""><b>CONTACT US</b></a></li>
+            </ul>
+        </div>
+        <i class="fa fa-minus-circle" onclick="showMenu()"></i>
+       </nav>
+       <div class="textbox">
+        <h1>City Of Dreams</h1>
+        <p>Nowadays every thing is on its way to be techified, cities are not far behind.<br>Click Below to Learn More !</p>
+        <a href="#box" class="hero-btn" onclick="return true">Learn More</a>
+       </div>
+    </section>
+    <!-- UTILITY -->
+    <section class="course">
+        <h1><b>What is a Smart City</b></h1>
+        <p>A Smart City is a mordern, urban area that uses advanced electronic methods and sensors to collect specific data.<br>For Example:</p>
+        <div class="row">
+            <div class="feature-1">
+                <h3><b>SINGAPORE</b></h3>
+                <p id="box-1" style="color:aquamarine"><b>Singapore is widely regarded as being ahead of the curve when it comes to smart technology. The country has an ageing population, and the government is focused on digital technologies and initiatives to raise productivity in the country's advanced economy. This has included a move to a digital healthcare system - normalising video consultations as well as introducing wearable IoT devices to monitor patients remotely.</b></p>
+            </div>
+            <div class="feature-2">
+                <h3><b>NEW YORK</b></h3>
+                <p id="box-2" style="color:rgb(216, 216, 103)"><b> Whilst New York does not feature as high as you might expect on the IMD list of smart cities, it is widely regarded as one of the smartest cities in the world. Hundreds of smart sensors have been placed throughout the different districts of New York City as part of its smart city pilot project in 2020.</b></p>
+            </div>
+            <div class="feature-3">
+                <h3><b>LONDON</b></h3>
+                <p id="box-3">Whilst New York does not feature as high as you might expect on the IMD list of smart cities, it is widely regarded as one of the smartest cities in the world. Hundreds of smart sensors have been placed throughout the different districts of New York City as part of its smart city pilot project in 2020.</p>
+            </div>
+        </div>
+    </section>
+    <!-- CAMPUS -->
+    <!-- <section class="campus">
+        <h1><b>Our global campus</b></h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+    </section> -->
+<!-- JAVACRIPT TO TOGGLE MENU -->
+<script>
+    var navLinks=document.getElementById("navLinks");
+    function showMenu(){
+        navLinks.style.right="0";
+    }
+    function hideMenu(){
+        navLinks.style.right="-200px";
+    }
+</script>
+
+
+
+</body>
+</html>
