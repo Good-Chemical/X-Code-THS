@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<Style>
+    * {
+        scroll-behavior: smooth;
+        margin: 0;
+        padding: 0;
+        font-family: 'Cairo', sans-serif;
+
+    }
+
+    .Header {
+        min-height: 100vh;
+        height: -10%;
+        width: 100%;
+        background-image: url('../static/images.gif');
+        background-repeat: repeat;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+    }
+
+    .h1 {
+        color: #f44336;
+
+    }
+
+    nav {
+        z-index: 1;
+        display: flex;
+        padding: 1% 706.85px;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        background-color: #f44336;
+        background-size: cover;
+        margin-top: 0px;
+    }
+
+    nav img {
+        width: 80px;
+    }
+
+    .nv-links {
+        flex: 1;
+        text-align: right;
+    }
+
+    .nav-links ul li {
+        list-style: none;
+        display: inline-block;
+        padding: 8px 12px;
+        position: relative;
+    }
+
+    .nav-links ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 20px;
+
+    }
+
+    .nav-links ul li::after {
+        content: '';
+        width: 0%;
+        height: 5px;
+        background: #ffffff;
+        display: block;
+        margin: auto;
+        transition: 0.5s;
+    }
+
+    .nav-links ul li:hover::after {
+        width: 100%;
+    }
+
+    .textbox {
+        width: 90%;
+        color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    .textbox h1 {
+        font-size: 62px;
+    }
+
+    .textbox p {
+        margin: 10px 0 40px;
+        font-size: 20px;
+        color: rgb(255, 255, 255);
+    }
+
+    .hero-btn {
+        display: inline-block;
+        text-decoration: none;
+        color: #fff;
+        border: 1px solid #fff;
+        padding: 12px 34px;
+        font-size: 13px;
+        background: transparent;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .hero-btn:hover {
+        border: 1px solid #f44336;
+        background: #f44336;
+        transition: 1s;
+    }
+
+    nav .fr {
+        display: none;
+    }
+
+    @media(max-width: 700px) {
+        nav {
+            z-index: 1;
+            display: flex;
+            padding: 1% 132px;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            background-color: #f44336;
+            background-size: cover;
+            margin-top: 0px;
+        }
+
+
+
+
+        .textbox h1 {
+            font-size: 20px;
+        }
+
+        .nav-links ul li {
+            display: block;
+        }
+
+        .nav-links {
+            position: absolute;
+            background: #f44336;
+            height: 100vh;
+            width: 200px;
+            top: 0;
+            right: -200px;
+            text-align: left;
+            z-index: 2;
+            transition: 1s;
+
+        }
+
+        nav .fr {
+            display: block;
+            color: #fff;
+            margin: 10px;
+            font-size: 22px;
+            cursor: pointer;
+        }
+        
+       
+
+        .nav-links ul {
+            padding: 30px;
+        }
+
+        nav li a {
+            color: #fff;
+        }
+
+        /* .fr {
+            z-index: 2;
+        } */
+
+    }
+
+    /* UTILITY */
+    .course {
+        width: 80%;
+        margin: auto;
+        text-align: center;
+        padding-top: 100px;
+        background-color: bisque;
+    }
+
+    h1 {
+        font-size: 36px;
+        font-weight: 600;
+
+    }
+
+    .p {
+        color: #777;
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 10px;
+        padding: 5px;
+    }
+
+    .row {
+        margin-top: 5%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .feature-1 {
+        flex-basis: 31%;
+        background-color: rgb(249, 159, 42);
+        border-radius: 10px;
+        margin-bottom: 5%;
+        padding: 20px 12px;
+        box-sizing: border-box;
+        transition: 0.5s;
+        background-size: cover;
+        font-size: 20px;
+        color: black;
+
+    }
+
+    .feature-2 {
+        flex-basis: 31%;
+        background-color: rgb(249, 159, 42);
+        border-radius: 10px;
+        margin-bottom: 5%;
+        padding: 20px 12px;
+        box-sizing: border-box;
+        transition: 0.5s;
+        background-size: cover;
+        font-size: 20px;
+    }
+
+    .feature-3 {
+        flex-basis: 31%;
+        background-color: rgb(249, 159, 42);
+        background-position: center;
+        border-radius: 10px;
+        margin-bottom: 5%;
+        padding: 20px 12px;
+        box-sizing: border-box;
+        transition: 0.5s;
+        font-size: 20px;
+
+    }
+
+    h3 {
+        text-align: center;
+        font-weight: 600;
+        margin: 10px 0;
+    }
+
+    .feature-1:hover {
+        box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+        background-image: url('../static/singh.gif');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-blend-mode: soft-light;
+
+    }
+
+    .feature-2:hover {
+        box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+        background-image: url('../static/asad.gif');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-blend-mode: soft-light;
+
+    }
+
+    .feature-3:hover {
+        box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+        background-image: url('../static/ahmed.gif');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-blend-mode: soft-light;
+    }
+
+    @media(max-width:700px) {
+        .row {
+            flex-direction: column;
+        }
+    }
+
+    #link {
+        height: 140px;
+    }
+
+    #link1 {
+        height: 120px;
+    }
+
+    /* PLANS */
+    .plans {
+        width: 80%;
+        margin: auto;
+        text-align: center;
+        padding-top: 3%;
+    }
+
+    .info {
+        flex-basis: 32%;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .info img {
+        width: 100%;
+        display: block;
+    }
+
+    .layer {
+        background: transparent;
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: 0.5s;
+    }
+
+    .layer:hover {
+        background-color: rgba(266, 0, 0, 0.7)
+    }
+
+    .layer h3 {
+        width: 100%;
+        font-weight: 500;
+        color: #fff;
+        font-size: 26px;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        position: absolute;
+        opacity: 0;
+        transition: 0.5s;
+    }
+
+    .layer:hover h3 {
+        bottom: 49%;
+        opacity: 1;
+    }
+
+    /* CAREERS */
+    .careers {
+        width: 80%;
+        margin: auto;
+        text-align: center;
+        padding-top: 100px;
+    }
+
+    .career-col {
+        flex-basis: 31%;
+        border-radius: 10px;
+        margin-bottom: 5%;
+        text-align: left;
+    }
+
+    .career-col img {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .career-col p {
+        padding: 0;
+        font-size: 18px;
+    }
+
+    .career-col h3 {
+        margin-top: 16px;
+        margin-bottom: 15px;
+        text-align: left;
+        font-size: 25px;
+
+    }
+
+    /* ---------TESTIMONAIL--------- */
+    .review {
+        width: 80%;
+        margin: auto;
+        padding-top: 100px;
+        text-align: center;
+    }
+
+    .testimonial-col {
+        flex-basis: 44%;
+        border-radius: 10px;
+        margin-bottom: 5%;
+        text-align: left;
+        background: #ec8787;
+        padding: 25px;
+        cursor: pointer;
+        display: flex;
+    }
+
+    .testimonial-col img {
+        height: 40px;
+        margin-left: 5px;
+        margin-right: 30px;
+        border-radius: 50%;
+    }
+
+    /* footer */
+    .footer {
+        width: 100%;
+        text-align: center;
+        padding: 30px 0;
+    }
+
+    .footer h4 {
+        margin-bottom: 25px;
+        margin-top: 20px;
+        font-weight: 600;
+    }
+
+    footer {
+        height: 70px;
+        background-color: black;
+        color: white;
+        text-align: center;
+    }
+
+    footer p {
+        padding: 15px;
+    }
+</Style>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X-CODE-THS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/fontawesome.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
+</head>
+
+<body>
+    <section class="Header">
+        <nav>
+            <a href="SC.html">
+                <img id="bv" src="../static/logo.png"> 
+                <div class="nav-links" id="navLinks">
+                    <!-- <p class="fr" onclick="hideMenu()">☰</p> -->
+
+                    <ul>
+                        <li><a href="#top"><b>HOME</b></a></li>
+                        <li><a onclick="hideMenu()" href="#link"><b>PLANS</b></a></li>
+                        <li><a onclick="hideMenu()" href="#lbozo"><b>CAREERS</b></a></li>
+                        <li><a onclick="hideMenu()" href="#nub"><b>REVIEW</b></a></li>
+
+                    </ul>
+                </div>
+                <p class="fr" onclick="showMenu()">☰</p>
+        </nav>
+        <div class="textbox">
+            <h1>City Of Dreams</h1>
+            <p>Nowadays every thing is on its way to be techified, cities are not far behind.<br>Click Below to Learn
+                More !</p>
+            <a href="#link1" class="hero-btn" onclick="return true">Learn More</a>
+            <p><br><br><br></p>
+            <p id="ggez"></p>
+        </div>
+    </section>
+    <div id="link1"></div>
+    <!-- UTILITY -->
+    <section class="course">
+
+        <body bgcolor="bisque">
+            <h1 id="utility"><b>What is a Smart City</b></h1>
+            <p style="font-size: 25px;">A Smart City is a mordern, urban area that uses advanced electronic methods and
+                sensors to collect specific data.<br>For Example:</p>
+            <div class="row">
+                <div class="feature-1">
+                    <h3><b>SINGAPORE</b></h3>
+                    <p id="box-1" style="color:rgb(0, 0, 0)"><b>Singapore is widely regarded as being ahead of the curve
+                            when it comes to smart technology. The country has an ageing population, and the government
+                            is focused on digital technologies and initiatives to raise productivity in the country's
+                            advanced economy.</b></p>
+                </div>
+                <div class="feature-2">
+                    <h3><b>NEW YORK</b></h3>
+                    <p id="box-2" style="color:rgb(0,   0, 0)"><b> Whilst New York does not feature as high as you might
+                            expect on the IMD list of smart cities, it is widely regarded as one of the smartest cities
+                            in the world. Hundreds of smart sensors have been placed throughout the different districts
+                            of New York City as part of its smart city pilot project in 2020.</b></p>
+                </div>
+                <div class="feature-3">
+                    <h3><b>LONDON</b></h3>
+                    <p id="box-3" style="color: black"><b>Whilst New York does not feature as high as you might expect
+                            on the IMD list of smart cities, it is widely regarded as one of the smartest cities in the
+                            world. Hundreds of smart sensors have been placed throughout the different districts of New
+                            York City as part of its smart city pilot project in 2020.</b></p>
+                </div>
+            </div>
+
+    </section>
+    <div id="link"></div>
+    <!-- PLANS -->
+    <section class="plans">
+        <h1 id="plans-head"><b>Plans Of A Smart City</b></h1>
+        <p style="font-size:25px;">The main goal of a smart city is to optimise city functions and promote<br>economic
+            growth while also improving the quality of life for citizens by using smart technologies and data analysis.
+        </p>
+
+        <div class="row">
+            <div class="info">
+                <img src="../static/Metro.gif">
+                <div class="layer">
+                    <h3><b>METROS INSTEAD OF PRIVATE TRANSPORT</b></h3>
+                </div>
+            </div>
+            <div class="info">
+                <img src="../static/water.gif">
+                <div class="layer">
+                    <h3><b>SEWAGE WATER PURIFIED TO PURE WATER</b></h3>
+                </div>
+            </div>
+            <div class="info">
+                <img src="../static/drone-delivery.gif" height="">
+                <div class="layer">
+                    <h3 id="lbozo"><b>DELIVERY OF PACKAGES USING DRONE</b></h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- -------CAREERS------- -->
+    <section class="careers">
+        <h1 id="carrer-op"><b>CAREER OPPORTUNITIES</b></h1>
+        <p style="font-size: 25px;">While transforming from just a ragged city to a smart city<br>It also opens up Job
+            Opportunitites</p>
+        <div class="row">
+            <div class="career-col">
+                <img src="../static/commit.jpg">
+                <h3><b>COMMIT</b></h3>
+                <p><b>We are committed to recruiting, developing, rewarding, and retaining the best possible candidates
+                        in the workforce. We strive to assist our team members in accomplishing both individual and
+                        overall organizational goals.</b></p>
+            </div>
+            <div class="career-col">
+                <img src="../static/creative.png">
+                <h3><b>EXPLORE</b></h3>
+                <p><b>We provide a work environment where people can drive results, develop and grow their careers. We
+                        recognize the individuality of each of us and we are on a mission to create a workplace where
+                        you can grow and succeed.</b></p>
+            </div>
+            <div class="career-col">
+                <img src="../static/unity.jpg">
+                <h3><b>VALUES</b></h3>
+                <p><b>At Smart City, we stand for integrity, efficiency, problem solving, equity, and character in all
+                        of our relationships and interactions. Our focus is on promoting growth, accountability, and
+                        empowerment in the company.</b></p>
+            </div>
+        </div>
+        <!-- --------TESTIMONIALS-------- -->
+        <section class="review">
+            <h1 id="nub"><b>COMMUNITY'S THOUGHTS</b></h1>
+            <p style="font-size: 25px ;">Here are some thoughts of the people who have accesed our website:</p>
+            <div class="row">
+                <div class="testimonial-col">
+                    <img src="../static/akshat.jpg">
+                    <div>
+                        <p style="font: size 18px ;">It is an amazing site, it gives a really good outlook to a smart
+                            and mordern city and has really impressed me!</p><br>
+                        <h3 style="text-align: left;"><b>Akshat Rungta</b></h3>
+                        <span class="material-symbols-outlined">
+                            star_rate
+                        </span>
+                        <span class="material-symbols-outlined">
+                            star_rate
+                        </span>
+                        <span class="material-symbols-outlined">
+                            star_rate
+                        </span>
+                        <span class="material-symbols-outlined">
+                            star_rate
+                        </span>
+                        <span class="material-symbols-outlined">
+                            star_half
+                        </span>
+                    </div>
+                </div>
+                <div class="testimonial-col">
+                    <img src="../static/advik.jpeg">
+                    <div>
+                        <p style="font: size 15px; ;">It's a brilliant site with an amazing user interface, easy to use
+                            and pleasing to the eyes and its usefulness cannot be understated either!</p>
+                        <h3 style="text-align: left;"><b>Advik Tibrewal</b></h3>
+                        <span class="material-symbols-outlined">
+                            star_rate
+                        </span>
+                        <span class="material-symbols-outlined">
+                            star_rate
+                        </span>
+                        <span class="material-symbols-outlined">
+                            star_rate
+                        </span>
+                        <span class="material-symbols-outlined">
+                            star_rate
+                        </span>
+                        <span class="material-symbols-outlined">
+                            star_rate
+                        </span>
+                    </div>
+
+                </div>
+                <!---------------FOOTER--------------->
+        </section class="footer">
+        <h4></h4>
+        <p></p>
+        <div class="icon">
+            <i class="fa-brands fa-instagram"></i>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>
+            Copyright Ⓒ X-CODE-THS | All rights reserved.
+        </p>
+
+
+    </footer>
+    <!-- JAVACRIPT TO TOGGLE MENU -->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+            
+        }
+    </script>
+
+
+
+</body>
+
+</html>
